@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8@kry)$52h38c@*272&fkh%p-)ro%rz*7^_4jn$w05e&rz#^x(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['photobookapi.azurewebsites.net']
 
 CORS_ORIGIN_WHITELIST = [
     'http://google.com',
