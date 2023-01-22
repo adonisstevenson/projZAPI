@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'photoBookAPI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F085DE8742A14E8BAB0467FD1EDE300B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FD5821C8F9CA48BB98FFCEAB7D6E0050 }}
