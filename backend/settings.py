@@ -25,10 +25,11 @@ SECRET_KEY = 'django-insecure-8@kry)$52h38c@*272&fkh%p-)ro%rz*7^_4jn$w05e&rz#^x(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['photobookapi.azurewebsites.net']
+ALLOWED_HOSTS = ['photobookapi.azurewebsites.net', "https://photobookapp.azurewebsites.net"]
 
 CORS_ORIGIN_WHITELIST = [
     'http://google.com',
+    'https://photobookapp.azurewebsites.net'
     'http://hostname.example.com',
     'http://localhost:3000',
     'http://127.0.0.1:9000'
@@ -36,10 +37,12 @@ CORS_ORIGIN_WHITELIST = [
 
 CSRF_TRUSTED_ORIGINS = [
         'http://localhost:3000',
+        "https://photobookapp.azurewebsites.net"
 ]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    "https://photobookapp.azurewebsites.net"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
