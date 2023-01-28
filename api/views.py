@@ -105,7 +105,7 @@ def index(request):
     allPtohosRaw = Photo.objects.filter(public=True).order_by('-id')
     favouritePhotos = None
 
-    token = request.COOKIES['jwt']
+    token = request.COOKIES.get('jwt')
 
     if token:
         payload = jwt.decode(jwt=token, key='secret', algorithms=['HS256'])
