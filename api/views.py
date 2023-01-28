@@ -251,6 +251,7 @@ class LoginView(APIView):
 
             response = Response()
 
+            response['Access-Control-Allow-Origin'] = 'photobookapp.azurewebsites.net'
             response.set_cookie(key='jwt', value=token, httponly=False)
 
             response.data = {
