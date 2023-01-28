@@ -253,6 +253,11 @@ class LoginView(APIView):
 
             response.set_cookie(key='jwt', value=token, httponly=False)
 
+            if conf.CORS_ALLOW_ALL_ORIGINS and not conf.CORS_ALLOW_CREDENTIALS:
+                response[ACCESS_CONTROL_ALLOW_ORIGIN] = "*"
+            else:
+                response[ACCESS_CONTROL_ALLOW_ORIGIN] = origin
+
             response.data = {
                 'jwt': token,
                 'username': user.username,
