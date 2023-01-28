@@ -53,6 +53,7 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_DOMAIN = 'https://photobookapp.azurewebsites.net'
 
 CORS_ALLOW_HEADERS = list(default_headers) + ['Set-Cookie']
 
