@@ -1,3 +1,6 @@
+import origin as origin
+from corsheaders.conf import conf
+from corsheaders.middleware import ACCESS_CONTROL_ALLOW_ORIGIN
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
@@ -253,10 +256,7 @@ class LoginView(APIView):
 
             response.set_cookie(key='jwt', value=token, httponly=False)
 
-            if conf.CORS_ALLOW_ALL_ORIGINS and not conf.CORS_ALLOW_CREDENTIALS:
-                response[ACCESS_CONTROL_ALLOW_ORIGIN] = "*"
-            else:
-                response[ACCESS_CONTROL_ALLOW_ORIGIN] = origin
+            response['Access-Control-Allow-Origin'] = 'https://photobookapp.azurewebsites.net'
 
             response.data = {
                 'jwt': token,
